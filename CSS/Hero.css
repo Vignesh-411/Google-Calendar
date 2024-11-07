@@ -1,0 +1,232 @@
+/* ---------------------------------------------------- RIPPLE EFFECT ------------------------------------------------------------------------------ */
+
+#ripple {
+  background-position: center;
+  transition: background 0.5s;
+  opacity: 0.8;
+}
+#ripple:hover {
+  background: #ffffff radial-gradient(circle, transparent 1%, #eeecec 1%)
+    center/15000%;
+  opacity: 0.8;
+}
+#ripple:active {
+  background-color: #a1a1a1;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* ---------------------------------------------------- MAIN CONTENT FITS THE SCREEN ------------------------------------------------------------------------------ */
+.MAINCONTENT{
+  margin-right: 3px;
+}
+.MAINSET-3 {
+  display: flex;
+  overflow: hidden;
+
+}
+
+.top {
+  display: flex;
+  border-bottom: 1px solid #dadce0;
+  padding-left:7.6px;
+  margin-left: -0.5px;
+  margin-right: 12.7px;
+}
+/* ---------------------------------------------------- FIXING THE DIV CONTENT---------------------------------------------------- */
+.top > div {
+  width: calc(100% / 7);
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  text-align: center;
+  color: #70757a;
+}
+
+.main-grid {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  overflow-y: auto;
+  
+
+  background:
+     linear-gradient(
+        white 30%,
+        rgba(255, 255, 255, 0)
+      )
+      center top,
+    
+      radial-gradient(
+        farthest-side at 50% 0,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      center top;
+
+  background-repeat: no-repeat;
+  background-size: 200% 20px, 300% 2px;
+  background-attachment: local, scroll;
+}
+
+.line {
+  border-left: 1px solid #dadce0;
+  height: 20px;
+  margin-top: -10px;
+}
+
+.lineh {
+    border-bottom: 1px solid #dadce0;
+    width: 8px;
+    margin-bottom: 15px;
+    margin-right: 0px;
+  }
+/* ------------------------------------------------------------------------------ TEXT DESIGN ------------------------------------------------------------------------------ */
+
+.top > div > button {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  display: flex;
+  color: #70757a;
+}
+
+.top > div > button:hover {
+  background-color: #e0e0e0;
+}
+
+.top > div > span {
+  font-weight: 600;
+  font-size: 11px;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.plusbtn {
+  border: none;
+  border-radius: 50%;
+  height: 56px;
+  padding-top: 6px;
+  width: 56px;
+  -webkit-transition: border 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background-color: #fff;
+}
+
+.plus {
+    height: 10px;
+    position: relative;
+  margin: 11px 0px 0px 8px;
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  outline: none;
+}
+
+.grid-item {
+  border: 1px solid #dfe1e5;
+  border-width: thin;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  padding: 20px;
+  text-align: center;
+  height: 8px;
+}
+
+.main-grid {
+  display: flex;
+  width: calc(100%7);
+  position: relative;
+  height: 590px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: margin-left 0.5s;
+  margin-left: -48px;
+padding-right: 4px;
+}
+
+.time {
+  padding-left: 16.5px;
+  padding-top: 0px;
+  font-size: 10px;
+  margin-left: 0px;
+  height: 590px;
+  margin-top: 2px;
+  color: #70757a;
+}
+
+.p{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 10px;
+    height:50px;
+    margin-bottom: -1.2px;
+    
+}
+
+.p > p{
+  margin-top: 30px;
+}
+
+
+.time .gmt{
+  display: flex;
+  margin-right: 15.5px;
+  margin-left: -15px;
+}
+
+.main-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-grid::-webkit-scrollbar-thumb {
+  background-color: #bdc1c6;
+  border-radius: 30px;
+}
+
+.main-grid::-webkit-scrollbar-thumb:active {
+  background-color: #80868b;
+}
+
+
+
+.plus > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 2rem;
+  top: 50px;
+  width: 50px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+z-index: 1;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.plus:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}

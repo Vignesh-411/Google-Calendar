@@ -1,0 +1,662 @@
+
+/* --------------------------------------------------------------- NAVBAR --------------------------------------------------------------- */
+.Navbar {
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid #dadce0;
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 8px;
+}
+
+.MAINSET-1 {
+  display: flex;
+  overflow: hidden;
+}
+
+.set-1 {
+  display: flex;
+  min-width: 238px;
+}
+
+.set-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.subset-1 {
+  display: flex;
+}
+
+.subset-2 {
+  display: flex;
+  
+}
+
+.set-3 {
+  display: flex;
+  margin-right: -1px;
+  padding: 4px ;
+
+}
+
+/* ========================================================= BUTTON RIPPLE EFFECT ========================================================= */
+#ripple {
+  background-position: center;
+  transition: background 0.5s;
+  opacity: 0.8;
+}
+#ripple:hover {
+  background: #ffffff radial-gradient(circle, transparent 1%, #eeecec 1%)
+    center/15000%;
+  opacity: 0.8;
+}
+#ripple:active {
+  background-color: #a1a1a1;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+
+/* ================================================================== CONTENT SHIFTING ============================================================================= */
+
+
+/* ========================================================= MENU ICON  ========================================================= */
+.menu {
+  left: 4px;
+  padding: 12px;
+  height: 25px;
+  margin-left: 4px;
+}
+
+.menu > span {
+
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  width: 75px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  left: 45px;
+  top: 68px;
+  transform: translateX(-50%) scale(0) ;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  
+}
+
+.menu:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.menu:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1) ;
+  
+}
+
+
+
+/* ========================================================= LOGO ICON  ========================================================= */
+.logo > img {
+  width: 40px;
+  height: 32px;
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+/* ========================================================= NAME  ========================================================= */
+
+.name {
+  margin-top: 12px;
+  margin-left: 12px;
+  padding-right: 30px;
+  font-size: 22px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  color: #3c4043;
+}
+
+/* ========================================================= CURRENT ICON  ========================================================= */
+
+.today > button {
+  position: relative;
+  top: 6px;
+  left: 9px;
+  margin-right: 20px;
+  height: 36px;
+  width: 65px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #dadce0;
+}
+
+.today > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 285px;
+  top: 68px;
+  width: auto;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+.today > button:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.today:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ========================================================= ARROW ICON  ========================================================= */
+
+.arrow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-left: 8px;
+}
+
+/* ========================================================= LEFT ICON  ========================================================= */
+.left > button {
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  background-color: white;
+margin-right: 0px;
+}
+
+.leftbtn:hover {
+  cursor: pointer;
+  background-color: #f9f9f9 !important;
+  border-radius: 50%;
+}
+
+/* ========================================================= LEFT BUTTON TOOLTIP ================================================= */
+.left > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 360px;
+  top: 68px;
+  width: 105px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.left:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+/* ========================================================= RIGHT ICON  ========================================================= */
+
+.right > button {
+  border: none;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  background-color: white;
+}
+
+.rightbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+/* ========================================================= RIGHT BUTTON TOOLTIP ================================================= */
+.right > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 390px;
+  top: 68px;
+  width: 75px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.right:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ========================================================= DROPDOWN ICON  =========================================================  */
+
+.dropdown {
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 13px;
+  background-color: none;
+}
+
+.dropdown > button {
+  border: none;
+  border-radius: 3px;
+  height: 28px;
+  width: auto;
+  background-color: white;
+}
+.drop {
+  display: flex;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 22px;
+  background-color: none;
+}
+
+.dropdown > button:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+}
+.down-arrow {
+  margin-left: 2px;
+  padding-top: 1px;
+}
+
+/* ==================================================================== SUBSET - 2 ==================================================================== */
+.search{
+margin-top: 4px;
+margin-right: 2px;
+}
+.search > button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0px 6px;
+  background-color: white;
+}
+
+.searchbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+.search > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 69.6rem;
+  top: 68px;
+  width: 54px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.search:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==================================================================== HELP AND SUPPORT ===================================================================================== */
+.support{
+  margin-right: 6px;
+  margin-top: 4px;
+  
+}
+.support > button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0px 6px;
+  background-color: white;
+}
+
+.helpbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+.support > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 72rem;
+  top: 68px;
+  width: 105px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.support:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==================================================================== SETTINGS ===================================================================================== */
+.settings{
+  margin-top: 4px;
+  margin-right: 3px;
+}
+.settings > button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0px 6px;
+  background-color: white;
+}
+
+.settingsbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+.settings > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 75rem;
+  top: 68px;
+  width: 60px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.settings:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==================================================================== WEEK DROPDOWN ===================================================================================== */
+
+.wname {
+  margin-right: 2px;
+}
+
+.week > button {
+  display: flex;
+  position: relative;
+  top: 6px;
+  left: 9px;
+  margin-right: 2px;
+  height: 36px;
+  width:85px;
+  font-size: 14px;
+  padding: 9px 0px 10px 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #dadce0;
+}
+
+
+.week > button:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+
+/* ==================================================================== TOGGLE FOR CALENDAR AND CHECKLIST ====================================================================================== */
+.toggle {
+  display: flex;
+  margin-top: 6px;
+  margin-left: 19px;
+  margin-right: 4px;
+  height: 35px;
+  width:98px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #dadce0;
+  
+  
+}
+
+
+/* ==================================================================== CALENDAR ====================================================================================== */
+
+.calendarbtn {
+  border: none;
+  height: 100%;
+  width: 50%;
+  padding: 7.5px 0px 5px;
+  margin-right: 10px;
+  background-color: white;
+  border-right: 1px solid #dadce0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+
+.calendarbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+}
+
+.calendarbtn > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 85rem;
+  top: 68px;
+  width: 140px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.calendarbtn:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+
+/* ==================================================================== CHECKLIST ===================================================================================== */
+.checklistbtn {
+  border: none;
+  height: 100%;
+  width: 50%;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 7.5px 0px 6px;
+  background-color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+
+
+.checklistbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+}
+
+.checklistbtn > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 87.5rem;
+  top: 68px;
+  width: 140px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.checklistbtn:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+/* ==================================================================== APPS ===================================================================================== */
+.apps{
+  margin-right: 8px;
+}
+.apps > button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0px 6px;
+  background-color: white;
+}
+
+.appsbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+.apps > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #636669;
+  left: 90rem;
+  top: 68px;
+  width: 95px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.apps:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+
+/* ==================================================================== ACCOUNT ===================================================================================== */
+.account{
+  margin-right: 3px;
+}
+.account > button {
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 3px ;
+  background-color: white;
+}
+
+.accountbtn:hover {
+  cursor: pointer;
+  background-color: #e0e0e0 !important;
+  border-radius: 50%;
+}
+
+.account > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #3c4043;
+  line-height: 18.5px;
+  left: 87.5rem;
+  top: 68px;
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  padding-left: 10px;
+  padding-top: 8px;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.account:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+}
+
+#username, #E-mailID {
+  color: #B0B4B8;
+}

@@ -1,0 +1,453 @@
+/* Sidebar styling */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.2s;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+  width: 250px;
+}
+.MAINCONTENT {
+  transition: 0.2s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.MAINCONTENT.shifted {
+  margin-left: 241px;
+  width: calc(100% - 200px);
+}
+
+.main-grid.shifted {
+  margin-right: 0px;
+  padding-right: 3.3px;
+}
+
+/* ------------------------------------------------------------------ SIDEBAR CALENDAR REAL TIME ------------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600&display=swap");
+
+.wrapper {
+  width: 225px;
+  background-color: white;
+  border-radius: 10px;
+  height: 235px;
+  margin: auto;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 0px;
+  height: 30px;
+}
+
+.icons > button {
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  margin-right: 6px;
+  z-index: 1;
+  height: 23px;
+}
+
+.icons > button:hover {
+  background-color: #f9f9f9 !important;
+  z-index: 999;
+}
+
+.current-date {
+  margin: 0px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 13px;
+  margin-bottom: 13px;
+  padding-left: 15px;
+  font-weight: bold;
+  color: #3c4043;
+}
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.calendar .weeks {
+  padding-left: 0px;
+  margin: 0px;
+  margin-top: 4px;
+  font-size: 9px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.calendar .days {
+  padding-left: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+  height: calc(100% / 6);
+  text-align: center;
+}
+
+.calendar .days li {
+  margin-top: 18px;
+  z-index: 1;
+  font-size: 9.5px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-weight: bold;
+  color: #3c4043;
+}
+.calendar .days li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.days li:hover::before {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+.days li.active::before {
+  background-color: #1967d2;
+}
+
+.days li.active {
+  color: white;
+}
+
+/* ---------------------------------------------------------------------------- dropdown .calendar ---------------------------------------------------------------------------- */
+
+.hide {
+  display: none;
+}
+
+.mini-cln {
+  position: absolute;
+  margin-top: 20px;
+  border-radius: 10px;
+  margin-left: 375px;
+  z-index: 999;
+  width: 275px;
+  height: 190px;
+}
+
+.icon {
+  margin-top: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600&display=swap");
+
+.wrapperr {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 240px;
+  margin: 0px;
+  box-shadow: black 0px 2px 10px -5px;
+}
+
+.headerr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  height: 30px;
+}
+
+.icon > button {
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 1px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  margin-right: 6px;
+  z-index: 1;
+  height: 23px;
+}
+
+.icon {
+  margin-right: 12px;
+}
+.icon > button:hover {
+  background-color: #f9f9f9 !important;
+  z-index: 999;
+}
+
+.curr-date {
+  margin: 0px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 2px;
+  padding-left: 25px;
+  font-weight: 600;
+  color: #3c4043;
+}
+
+.calendarr ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.calendarr .week {
+  padding-left: 18px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-size: 9px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+.calendarr .week li {
+  width: 35px;
+  align-items: center;
+}
+
+.calendarr .day {
+  padding-left: 18px;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.calendarr ul li {
+  position: relative;
+  width: calc(100% / 7);
+  height: calc(100% / 6);
+  text-align: center;
+}
+
+.calendarr .day li {
+  margin-top: 17px;
+  z-index: 1;
+  width: 35px;
+  font-size: 9.5px;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-weight: bold;
+  color: #3c4043;
+}
+.calendarr .day li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.day li:hover::before {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.day li.inactive {
+  color: #aaa;
+}
+.day li.active::before {
+  background-color: #1967d2;
+}
+
+.day li.active {
+  color: white;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.5s;
+  opacity: 0.8;
+}
+.ripple:hover {
+  background: #ffffff radial-gradient(circle, transparent 1%, #eeecec 1%)
+    center/15000%;
+  opacity: 0.8;
+}
+.ripple:active {
+  background-color: #a1a1a1;
+  background-size: 100%;
+  transition: background 0s;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #bdc1c6;
+  border-radius: 20px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:active {
+  background-color: #80868b;
+}
+
+.daay li {
+  list-style: none;
+}
+
+.daay {
+  padding-left: 0px;
+}
+
+.top .day .active {
+  background-color: #1967d2;
+  color: white;
+}
+
+.day span .active {
+  color: #1967d2;
+}
+
+.top .day {
+  transition: background-color 3s ease-in-out;
+}
+
+.search-label {
+  position: relative;
+  display: inline-block;
+  border: none;
+}
+
+#search {
+  height: 35px;
+  width: 200px;
+  padding-left: 35px; /* Adjust padding to make room for the icon */
+  box-sizing: border-box;
+  font-size: 14px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="%235f6368"%3E%3Cpath d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/%3E%3C/svg%3E')
+    no-repeat;
+  background-position: 10px center; /* Position the image */
+  background-size: 20px 20px; /* Size the image */
+  padding-left: 10px;
+  background-color: #f1f3f4;
+  border: none;
+  border-radius: 4px;
+  margin-left: 28px;
+}
+
+/* Hide the icon when user starts typing */
+#search:not(:placeholder-shown) {
+  background-image: none; /* Remove the icon when input is not empty */
+  border: none;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+}
+
+.dropbox{
+  margin-top: 25px;
+  margin-left: 5px;
+}
+.checkls{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height:32px;
+  border: none;
+  background-color: white;
+  font-family: 'Google sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.checkls:hover{
+  background-color:#E0E0E0;
+  cursor: pointer;
+}
+
+#flipper:hover{
+  background-color:#E0E0E0;
+  cursor: pointer;
+}
+
+.checkls > div{
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.text{
+  padding-top:5px;
+}
+
+.down-arr{
+  transform: rotate(180deg);
+  padding-top: 4px;
+}
+
+.flip{
+  transform: rotate(0deg);
+}
+
+.down-arr > svg{
+  padding-bottom: 4px;
+  margin-bottom: -7px;
+}
+
+.dropbox-list{
+  width: 100%;
+  margin-left: 5px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 30px;
+  margin-top: 2px;  
+  font-family: 'Google sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #3c4043;
+  background-color: #1967d2;
+}
+
+.task:hover{
+  background-color:#E0E0E0;
+}
+
+
+
+
+  
